@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saad Ali's Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FAF1E4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300vh;
+        }
+        
+        .intro-text {
+            font-size: 120px;
+            font-family: Serif;
+            text-align: center;
+            margin-top: -110%;
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: -35%;
+        }
+        .intro-text-lower {
+            font-size: 120px;
+            font-family: Serif;
+            text-align: center;
+            margin-top: -90%;
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: -10.7%;
+        }
+
+        .description {
+            font-size: 18px;
+            margin-top: -5px;
+            font-family: Serif;
+            margin-left: -60%;
+            background-color: #FAF1E4;
+        }
+
+        /* New div with background color at 220vh */
+        .background-two {
+            background-color: #9EB384;
+            min-height: 120vh;  
+            position: absolute;
+            top: 95vh;
+            width: 100%;
+        }
+
+        /* Add an "About Me" section within the "background-two" */
+        .about-me-section {
+            background-color: #9EB384;
+            padding: 20px;
+            margin-left: 45%;
+            font-family: Serif;
+            margin-top: 5%;
+            font-size: 54px;
+        }
+        .Paragraph-aboutme {
+            background-color: #9EB384;
+            padding: 20px;
+            text-align: left;
+            font-family: Serif;
+            font-size: 20px;
+            width: 700px;
+            margin-top: -7%;
+            margin-left: 45%;
+        }
+
+        /* Add your profile picture */
+        .profile-picture {
+            max-width: 25%;
+            float: left;
+            margin: 20px 20px 0 0;
+            border-radius: 10px;
+            margin-left: 17%;
+            margin-top: 10%;
+        }
+        .clickable-box-container {
+           
+           width: 100%;
+           height: auto;
+            
+        }
+
+        /* Clickable vertical rectangular box */
+        .clickable-box {
+    width: 260px;
+    height: 260px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 20px 10px 20px 0; /* Adjust margin for spacing */
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    float: left; /* Add float property */
+}
+
+       
+        .clickable-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .clickable-box.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .flipped {
+            transform: rotateY(180deg);
+        }
+        .box2 {
+            width: 260px;
+            height: 260px;
+            background-color: rgba(255, 255, 255, 0.7);
+            margin: 20px 10px; /* Center the box horizontally */
+            cursor: pointer;
+            transition: transform 0.5s, box-shadow 0.5s;
+            transform-style: preserve-3d;
+            position: relative;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            align-items: center;
+            margin-left: 46%;
+            margin-top: -1%;
+            
+        
+        }
+
+        .clickable-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .clickable-box.flipped {
+            transform: rotateY(180deg);
+        }
+
+
+
+
+        /* Skills heading inside the clickable box */
+        .skills-heading {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            backface-visibility: hidden;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 40px;
+        }
+         /* Style for highlighted boxes */
+        
+        .highlight-box-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+                /* Style for the year */
+        .year {
+            font-weight: bold; /* Customize the font weight */
+            font-size: 12px;
+            justify-content:end;
+            
+        }
+
+        /* Style for "school," "college," and "university" */
+        .school {
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            margin: 5px;
+            padding: 1px 7px;
+            width: fit-content ;    
+            border-radius: 6px;
+            text-align: left;
+            margin-left: -2%;
+            font-weight: bold;
+
+        }
+
+        .college {
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            margin: 5px;
+            padding: 1px 7px;
+            width: fit-content ;    
+            border-radius: 6px;
+            text-align: left;
+            margin-left: -2%;
+            font-weight: bold;
+
+        }
+
+        .university {
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            padding: 1px 7px;
+            width: fit-content ;    
+            border-radius: 6px;
+            text-align: left;
+            margin-left: -2%;
+            font-weight: bold;
+
+        }
+        .name{
+            text-align: left;
+            font-size: medium;
+            color: rgb(87, 78, 78);
+            margin-top: -4%;
+            font-style: italic;
+        }
+
+        /* Style for the major and program */
+        .major,
+        .program {
+            margin: 0;
+        }
+        .ba{
+            margin-top: -5%;
+            margin-left: 13%;
+            margin-bottom: -100px;
+            line-height: 80%;
+        }
+        .bc{
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            margin: 5px;
+            padding: 1px 7px;
+            width: fit-content ;
+            margin-left: 10%;
+            line-height: 170%;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /* Style for the back side of the box */
+        .clickable-box.flipped .back-content {
+            display: block;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Content to be hidden on the back side */
+        .back-content {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotateY(180deg);
+            margin-bottom: -10%;
+        }
+
+        /* Style for the content within the back side */
+        .back-content-inner {
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            margin: 5px;
+            padding: 1px 7px;
+            width: fit-content ;    
+            border-radius: 6px;
+            text-align: left;
+            margin-left: 10%;
+            
+        
+        }
+        
+
+        .aws-solution {
+            
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            margin: 5px 10px;
+            padding: 5px 10px;
+            width: fit-content; 
+            border-radius: 6px;
+            text-align: left;
+        }
+
+        .terraform {
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            padding: 5px 10px;
+            width: fit-content; 
+            border-radius: 6px;
+            text-align: left;
+            margin-left: 10%;
+        }
+
+        .docker {
+            width: 120px;
+            margin-top: -10%;
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            margin: 5px 10px;
+            padding: 5px 10px;
+            width: fit-content; 
+            border-radius: 6px;
+            text-align: left;
+            margin-right: 30%;
+            margin-left: 46%;
+            margin-top: -17%;
+        }
+
+        .golang {
+            width: 100px;
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            margin: 5px 10px;
+            padding: 5px 10px;
+            width: fit-content; 
+            border-radius: 6px;
+            text-align: left;
+            margin-top: 5%;
+            margin-left: 10%;
+        }
+
+        .cpp {
+            width: -30px;
+            margin-left: 40%;
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            margin: 5px 10px;
+            padding: 5px 10px;
+            width: fit-content; 
+            border-radius: 6px;
+            text-align: left;
+            margin-left: 76%;
+            margin-top: -29%;
+        }
+        .PE{
+            width: -30px;
+            margin-left: 40%;
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            margin: 5px 10px;
+            padding: 5px 10px;
+            width: fit-content; 
+            border-radius: 6px;
+            text-align: left;
+            margin-left: 10%;
+            margin-top: 20%;
+
+        }
+
+         /* .highlight-box {
+            background-color: rgb(187, 191, 199);
+            color: rgb(26, 25, 25);
+            margin: 5px 10px; /* Adjust the margin as needed 
+            padding: 5px 10px;
+            width: fit-content; 
+            border-radius: 6px;
+            text-align: left;
+            margin-inline: -10px;
+            margin-left: 10%;
+        }  */
+        /* Style for the front side of the box */
+        .front-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .skills-icon {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 90px;
+            color: cornflowerblue;
+            margin-left: -20px;
+            justify-content: center;
+        }
+
+        .Experience.back-content-inner{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 60%;
+        }
+        .b-details{
+            font-size: 18px;
+            font-family:'Times New Roman', Times, serif;
+            font-style: italic;
+            margin-top: 18%;
+            margin-left: 60%;
+        }
+        .background-three {
+            background-color: #FAF1E4;
+            min-height: -10vh;
+        }
+        
+            /* Style for the portfolio section */
+            .portfolio-section {
+            margin-left: 30%;
+            font-size: 60px;
+            margin-top: -20px; /* Adjust the margin-top property to move the word "portfolio" down */
+            color: #333; /* Change the color as needed */
+            margin-left: 39%;
+            
+        }
+       /* Style for the portfolio container */
+            .portfolio-container {
+                display: flex;
+                justify-content: -10%; /* Adjust spacing between portfolio items */
+                margin-left: 50%; /* Adjust the left margin as needed */
+                margin-top: 50px; /* Adjust the top margin as needed */
+                color: #333; /* Change the color as needed */
+                margin-left: 10%;
+            }
+
+            /* Style for portfolio items */
+            .portfolio-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Style for portfolio images */
+            .portfolio-image1 {
+                max-width: 60%;
+                height: 50%;
+                justify-content: space-evenly;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                margin-left: 20% ;
+                margin-top: 19%;
+                
+                
+                /* Remove the "float" property and "display" property for flex layout */
+            }
+            .portfolio-image2{
+                max-width: 55%;
+                height: 50%;
+                justify-content: space-evenly;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                margin-left: -25% ;
+                margin-top: 14%;
+                
+
+            }
+          
+
+
+        /* Style for portfolio descriptions */
+        .portfolio-description1 {
+            font-size: 18px;
+            width: 35%;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 25%;
+        }
+        .portfolio-description2 {
+            font-size: 18px;
+            text-align: center;
+            width: 35%;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: -25%;
+        }
+        .portfolio-description3{
+            font-size: 15px;
+            margin-left: -98%;
+            margin-top: 5%;
+            font-size: small;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        .background-four{
+            height: 80vh;
+            background-color: #9EB384;
+            margin-top : 5%  ;
+            
+        }
+        .Contact{
+            font-size: 125px;
+            margin-left: 20%;
+            margin-top: 5%;
+            
+        }
+        .me{
+            font-size: 125px;
+            margin-left: 35%;
+            margin-top: -3%;
+
+
+        }
+        /* Style for Facebook icon */
+    .facebook-icon {
+      /*  background-color: #1877F2; /* Facebook blue */
+        width: 10px;
+        height: 10px;
+        border-radius: 50%; /* Make it circular */
+        margin-right: 20px; /* Adjust spacing between icons */
+    }
+    
+    /* Style for Instagram icon */
+    .instagram-icon {
+       /* background-color: #E4405F; /* Instagram pink */
+        width: 10px;
+        height: 10px;
+        border-radius: 50%; /* Make it circular */
+        margin-right: 20px; /* Adjust spacing between icons */
+    }
+    
+    /* Style for LinkedIn icon */
+    .linkedin-icon {
+       /* background-color: #0077B5;  LinkedIn blue */
+        width: 10px;
+        height: 10px;
+        border-radius: 50%; /* Make it circular */
+        margin-right: 20px; /* Adjust spacing between icons */
+    }
+    
+    /* Style for Twitter icon */
+    .twitter-icon {
+       /* background-color: #1DA1F2; /* Twitter blue */
+        width: -3px;
+        height: -3px;
+        border-radius: 50%; /* Make it circular */
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    .whatsapp-icon{
+        width: -3px;
+        height: -3px;
+        margin-top: 10%;
+
+    }
+    .gmail-icon{
+        width: -3px;
+        height: -3px;
+        border-radius: 50%; /* Make it circular */
+        margin-left: 35%;
+        margin-top: 10%;
+
+    }
+    .social-icons-vertical{
+        margin-top: -10%;
+        margin-left: 32%;
+    
+
+    }
+    .social-icons{
+        justify-content: end;
+        margin-left: 32%;
+        margin-top: -20;
+    }
+    .gettouch{
+        font-size: 34px;
+        margin-left: 30%;
+        margin-top: -15%;
+        
+
+    }
+    .gmailct{
+        
+        margin-left: 36%;
+        margin-bottom: 0%;
+        font-size: 20px;
+        margin-top: 1.5%;
+    }
+
+    .whatsappct{
+        margin-left: 36%;
+        margin-top: 3.5%;
+        font-size: 20px;
+
+
+    }
+        .cloud-computing{
+            margin-left: 140%;
+            margin-top: -90%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="intro-text">
+        Hi,
+    </div>
+    <div class="intro-text-lower">
+        I'm Saad Ali
+        
+        <div class="description">A DevOps Engineer in Training</div>
+        <img src="cloud-computing.png" alt="cloud-computing" class="cloud-computing">
+
+    </div>
+
+    <!-- New div for background color background-two -->
+    <div class="background-two">
+        
+        <!-- Profile picture -->
+        <img src="your-profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+        
+        <div class="about-me-section">
+            <h2>About Me</h2>
+        </div>
+        <div class="Paragraph-aboutme">
+            <!-- Add your profile picture here -->
+            
+            <p>Hello! I'm Saad Ali, a dedicated professional with a passion for cloud computing, software development, and infrastructure design. I recently completed an AWS Solutions Architect course, gaining expertise in architecting and deploying secure, scalable, and fault-tolerant applications on the AWS platform.
+                In addition to AWS, I have hands-on experience with Docker and Terraform, a leading containerization technology. I excel in designing and implementing containerized environments for efficient application deployment, isolation, and scalability.
+                With a strong programming background in C++, Python, and Golang, I am proficient in developing robust, high-performance software solutions across diverse domains. I thrive on building elegant and efficient code, whether it involves complex algorithms, efficient data structures, or scalable microservices.</p>
+        </div>
+
+      
+
+      <!-- Clickable horizontal rectangular box 1 -->
+<div class="clickable-box" onclick="toggleFlip(this)">
+    <div class="front-content">
+        <img src="skills.png" alt="Skills Icon" class="skills-icon">
+        <div class="skills-heading">Skills</div>
+    </div>
+    <div class="back-content">
+        <!-- Content to be displayed on the back side -->
+        <div class="back-content-inner">
+            <p>AWS Solution Architect</p>
+        </div>
+        <p class="highlight-box terraform">Terraform</p>
+        <p class="highlight-box docker">Docker</p>
+        <p class="highlight-box golang">Golang</p>
+        <p class="highlight-box cpp">C++</p>
+        <p class="highlight-box PE">Prompt Engineering</p>
+
+    </div>
+</div>
+
+<!-- Clickable horizontal rectangular box 2 -->
+<div class="clickable-box" onclick="toggleFlip(this)">
+    <div class="front-content">
+        <img src="experience.png" alt="Another Icon" class="skills-icon">
+        <div class="skills-heading">Experience</div>
+    </div>
+    <div class="back-content">
+        <!-- Content to be displayed on the back side -->
+        <div class="bc">
+            <p>As a student, I may lack market experience, but I've honed my skills by extensively practicing AWS architecture design and successfully executing projects using Terraform and Docker.</p>
+        </div>
+        <p class="highlight-box back-experience"></p>
+    </div>
+</div>
+
+<!-- Clickable horizontal rectangular box 3 -->
+<!-- Clickable horizontal rectangular box -->
+<div class="clickable-box" onclick="toggleFlip(this)">
+    <div class="front-content">
+        <img src="education.png" alt="Yet Another Icon" class="skills-icon">
+        <div class="skills-heading">Education</div>
+    </div>
+    <div class="back-content">
+        <!-- Content to be displayed on the back side -->
+        <div class="ba">
+            <p><span class="school">Matriculation</span> <span class="year">2018</span></p>
+            <p class="name">Allied school</p>
+            <p class="major">Major: Computer Science</p>
+            <p><span class="college">Intermediate</span> <span class="year">2018-2020</span></p>
+            <p class="name">Garrison college</p>
+            <p class="program">Intermediate in Computer Science</p>
+            <p><span class="university">Bachelor's</span> <span class="year">2020-2024</span></p>
+            <p class="name">Lahore Garrison University</p>
+            <p class="program">Bachelor's in Computer Science</p>
+         
+
+        </div>
+    </div>
+</div>
+            <div class="b-details">
+                <!-- Add your profile picture here -->
+                
+                <p>Click the boxes for details</p>
+            </div>
+
+
+
+      <script>
+        function toggleFlip(element) {
+            element.classList.toggle("flipped");
+        }
+    </script>
+    <div class="background-three" style="background-color: #FAF1E4; min-height: 100vh;">
+       <!-- Portfolio section -->
+<div class="portfolio-section">
+    <h2>Portfolio</h2>
+</div>
+
+<!-- Container for portfolio items -->
+<div class="portfolio-container">
+    <!-- First portfolio item -->
+   <!-- First portfolio item -->
+<div class="portfolio-item">
+    <img src="portfolio-image1.jpg" alt="Portfolio Image 1" class="portfolio-image1">
+    <p class="portfolio-description1">Site to site VPN project.</p>
+</div>
+<!-- Second portfolio item -->
+<div class="portfolio-item">
+    <img src="portfolio-image2.jpg" alt="Portfolio Image 2" class="portfolio-image2">
+    <p class="portfolio-description2">This portfolio was created using Prompt Engineering by ChatGPT and then uploaded to AWS S3 with the assistance of Terraform.</p>
+    <p class="portfolio-description3">More comming soon...</p>
+
+</div>
+
+</div>
+
+    </div>
+    <!-- ... previous code ... -->
+<!-- ... previous code ... -->
+
+<div class="background-four" style="background-color: #9EB384; min-height: 50vh;">
+    <!-- background4 section -->
+    <div class="Contact">Contact</div>
+    <div class="me">Me</div>
+    <div class="Socials" style="margin-left: 32%; margin-top: 15%; font-size: 35px ;">Socials</div>
+    <div class="gettouch">Get in touch with me</div>
+    <div class="gmailct">Saadali18716@gmail.com</div>
+    <div class="whatsappct">+92 307-47015-73</div>
+
+
+
+    <!-- Horizontal group for Facebook, Instagram, LinkedIn, and Twitter -->
+     <div class="social-icons">
+        <div class="social-icons" style="margin-top: 127px; margin-left: 30%; justify-content: end;"></div> 
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/saad.ali16.3551380?mibextid=ZbWKwL" target="_blank" class="facebook-icon">
+            <img src="facebook-icon.png" alt="Facebook" width="40" height="40">
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/saadiiiiii000/" target="_blank" class="instagram-icon">
+            <img src="instagram-icon.png" alt="Instagram" width="40" height="40">
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/saad-ali-194a22224/" target="_blank" class="linkedin-icon">
+            <img src="linkedin-icon.png" alt="LinkedIn" width="40" height="40">
+        </a>
+
+        <!-- Twitter -->
+        <a href="https://twitter.com/SaadAli47029785?t=bu6bdlrACKMGaZzf0tbQAg&s=09" target="_blank" class="twitter-icon">
+            <img src="twitter-icon.png" alt="Twitter" width="40" height="40">
+        </a>
+    
+
+  
+</div>
+
+    <!-- Vertical group for WhatsApp -->
+    <div class="social-icons-vertical">
+        <!-- WhatsApp -->
+        <a class="whatsapp-icon" >
+            <img src="whatsapp-icon.png" alt="WhatsApp" width="40" height="40" style="margin-top: -100%;">
+        </a>
+    </div>
+
+    <!-- Vertical group for Gmail -->
+    <div class="social-icons-vertical">
+        <!-- Gmail -->
+        <a  class="gmail-icon">
+            <img src="gmail-icon.png" alt="Gmail" width="40" height="40" style="margin-left: -35%; margin-top: 4%;">
+        </a>
+    </div>
+
+<!-- ... rest of your code ... -->
+
+
+<!-- ... rest of your code ... -->
+
+    
+ 
+</body>
+</html>
