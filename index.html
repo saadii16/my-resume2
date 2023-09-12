@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saad Ali's Portfolio</title>
     <style>
+        /* Common styles for all screen sizes */
         body {
             margin: 0;
             padding: 0;
@@ -15,35 +16,36 @@
             min-height: 300vh;
         }
 
-         /* Responsive styles for screens with a maximum width of 768px (tablets and smaller) */
-        @media (max-width: 768px) {
-            .intro-text {
-                font-size: 80px; /* Adjust font size for smaller screens */
-                /* Add more responsive styles here */
-            }
+        /* ... Other common styles ... */
 
+        /* Styles for screens up to 992px */
+        @media (max-width: 992px) {
+            .intro-text,
             .intro-text-lower {
-                font-size: 80px; /* Adjust font size for smaller screens */
-                /* Add more responsive styles here */
+                font-size: 80px;
             }
-
-            /* Add more responsive styles for other elements */
+            .intro-text-lower {
+                margin-top: -70%;
+            }
+            /* Adjust other styles as needed for smaller screens */
         }
 
-        /* Responsive styles for screens with a maximum width of 480px (phones) */
-        @media (max-width: 480px) {
-            .intro-text {
-                font-size: 60px; /* Adjust font size for smaller screens */
-                /* Add more responsive styles here */
-            }
-
+        /* Styles for screens up to 1200px */
+        @media (min-width: 993px) and (max-width: 1200px) {
+            .intro-text,
             .intro-text-lower {
-                font-size: 60px; /* Adjust font size for smaller screens */
-                /* Add more responsive styles here */
+                font-size: 100px;
             }
-
-            /* Add more responsive styles for other elements */
+            .intro-text-lower {
+                margin-top: -90%;
+            }
+            /* Adjust other styles as needed for medium-sized screens */
         }
+
+        /* Add more media queries for other screen sizes as necessary */
+
+        /* ... Your existing styles ... */
+
         
         .intro-text {
             font-size: 120px;
