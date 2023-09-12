@@ -14,6 +14,36 @@
             align-items: center;
             min-height: 300vh;
         }
+
+         /* Responsive styles for screens with a maximum width of 768px (tablets and smaller) */
+        @media (max-width: 768px) {
+            .intro-text {
+                font-size: 80px; /* Adjust font size for smaller screens */
+                /* Add more responsive styles here */
+            }
+
+            .intro-text-lower {
+                font-size: 80px; /* Adjust font size for smaller screens */
+                /* Add more responsive styles here */
+            }
+
+            /* Add more responsive styles for other elements */
+        }
+
+        /* Responsive styles for screens with a maximum width of 480px (phones) */
+        @media (max-width: 480px) {
+            .intro-text {
+                font-size: 60px; /* Adjust font size for smaller screens */
+                /* Add more responsive styles here */
+            }
+
+            .intro-text-lower {
+                font-size: 60px; /* Adjust font size for smaller screens */
+                /* Add more responsive styles here */
+            }
+
+            /* Add more responsive styles for other elements */
+        }
         
         .intro-text {
             font-size: 120px;
@@ -264,8 +294,6 @@
             border-radius: 6px;
             text-align: left;
             margin-left: 10%;
-            
-        
         }
         
 
@@ -279,6 +307,7 @@
             border-radius: 6px;
             text-align: left;
         }
+
 
         .terraform {
             background-color: rgb(187, 191, 199);
